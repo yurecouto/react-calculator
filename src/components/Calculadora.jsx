@@ -23,10 +23,10 @@ export default () => {
     }
 
     function fatorial(e) {
-        let resultado = e.target.value
-        let fatorial = resultado
+        let result = e.target.value
+        let fatorial = result
     
-        for (let i = resultado - 1; i > 0; i--) {
+        for (let i = result - 1; i > 0; i--) {
             fatorial *= i
         }
         
@@ -34,31 +34,31 @@ export default () => {
     };
 
     function calculate(e) {
-        let resultado = e.target.value
+        let result = e.target.value
     
-        if (resultado) {
-            setNum(eval(resultado))
+        if (result) {
+            setNum(eval(result))
         }
     };
 
     function squareroot(e) {
-        let resultado = e.target.value
-        setNum(Math.sqrt(resultado).toFixed(9))
+        let result = e.target.value
+        setNum(Math.sqrt(result).toFixed(9))
     }
 
     function invert(e) {
-        let resultado = e.target.value
+        let result = e.target.value
 
-        if (resultado > 0) {
-            setNum(resultado * -1)
+        if (result > 0) {
+            setNum(result * -1)
         } else {
-            setNum(resultado * -1)
+            setNum(result * -1)
         }
     }
     
     return (
         <div className="calculadora">
-            <p id="resultado">{num}</p>
+            <p id="result">{num}</p>
             <table>
                 <tr>
                     <td><button className="buttona" onClick={squareroot} value={num}>√</button></td>
